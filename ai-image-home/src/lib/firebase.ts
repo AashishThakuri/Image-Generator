@@ -8,15 +8,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 // to avoid accessing window during SSR.
 let analytics: import("firebase/analytics").Analytics | undefined;
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDOOuoUN4fJsK6BoxJ4hVKpo9UDtwkpYgg",
-  authDomain: "image-editor-fda6f.firebaseapp.com",
-  projectId: "image-editor-fda6f",
-  storageBucket: "image-editor-fda6f.firebasestorage.app",
-  messagingSenderId: "700645993218",
-  appId: "1:700645993218:web:0b18fce9b3ddc7d40ff01b",
-  measurementId: "G-PFP4C76E4M",
-};
+
 
 function createFirebaseApp(): FirebaseApp {
   return !getApps().length ? initializeApp(firebaseConfig) : getApp();
